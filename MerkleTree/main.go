@@ -38,7 +38,7 @@ func main() {
 	merkle_root := generateMerkleRoot(hashes)
 	merkle_tree := generateMerkleTree(hashes)
 	merkle_proof := generateMerkleProof(hashes[4], hashes)
-	// merkle_root_from_merkle_proof := getMerkleRootFromMerkleProof(merkle_proof)
+	merkle_root_from_merkle_proof := getMerkleRootFromMerkleProof(merkle_proof)
 
 	fmt.Println("--------------------MERKLE ROOT--------------------")
 	fmt.Println(merkle_root)
@@ -57,10 +57,10 @@ func main() {
 		fmt.Println(mp)
 	}
 
-	// fmt.Println("-----------------MERKLE ROOT FROM MERKLE PROOF-----------------")
-	// fmt.Println(merkle_root_from_merkle_proof)
+	fmt.Println("-----------------MERKLE ROOT FROM MERKLE PROOF-----------------")
+	fmt.Println(merkle_root_from_merkle_proof)
 
-	// fmt.Println("MERKLE ROOT == MERKLE ROOT FROM MERKLE PROOF: ", merkle_root == merkle_root_from_merkle_proof)
+	fmt.Println("MERKLE ROOT == MERKLE ROOT FROM MERKLE PROOF: ", merkle_root == merkle_root_from_merkle_proof)
 }
 
 func generateMerkleRoot(hashes []string) string {
